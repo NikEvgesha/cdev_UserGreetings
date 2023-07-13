@@ -14,16 +14,15 @@ namespace UserGreetings
             Console.WriteLine("Сгенерированные пользователи:");
             userDB.Display(users);
 
-            Console.Write("\nВведите логин пользователя: "); 
-            string login = Console.ReadLine();
 
-            foreach (User user in users)
+            while (true)
             {
-                if (user.Login == login)
-                {
-                    user.Greeting();
-                }
+                Console.Write("\nВведите ID пользователя: ");
+                int userId = Int32.Parse(Console.ReadLine());
+                users[userId - 1].Greeting();
+                
             }
+            
 
         }
 

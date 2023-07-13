@@ -8,6 +8,7 @@ namespace UserGreetings
 {
     public class User
     {
+        public int Id { get; set; }
         public string Login { get; set; }
         public string Name { get; set; }
         public bool IsPremium { get; set; }
@@ -37,6 +38,9 @@ namespace UserGreetings
             {
                 Console.WriteLine("К сожалению, у Вас нет подписки! Запускаем рекламу...");
                 User.ShowAds();
+            } else
+            {
+                Console.WriteLine("У Вас оформлена подписка! <3");
             }
         }
 

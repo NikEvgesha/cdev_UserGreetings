@@ -18,6 +18,7 @@ namespace UserGreetings
             for (int i = 0; i < num; i++) 
             {
                 users[i] = new User();
+                users[i].Id = i+1;
                 users[i].Name = Faker.Name.First();
                 users[i].Login = Faker.Internet.UserName();
                 if (random.Next(2) == 1)
@@ -30,13 +31,13 @@ namespace UserGreetings
 
         public void Display(User[] users)
         {
-            Console.WriteLine(new string('-', 30 + 20 + 10));
-            Console.WriteLine("|{0,30}|{1,20}|{2,10}|", "Login", "Name", "Premium");
-            Console.WriteLine(new string('-', 30 + 20 + 10));
+            Console.WriteLine(new string('-', 5 + 20 + 20 + 10));
+            Console.WriteLine("|{0,5}|{1,20}|{2,20}|{3,10}|", "ID", "Login", "Name", "Premium");
+            Console.WriteLine(new string('-', 5 + 20 + 20 + 10));
 
             foreach (User user in users)
             {
-                Console.WriteLine("|{0,30}|{1,20}|{2,10}|", user.Login, user.Name, user.IsPremium);
+                Console.WriteLine("|{0,5}|{1,20}|{2,20}|{3,10}|", user.Id, user.Login, user.Name, user.IsPremium);
             }
         }
 
