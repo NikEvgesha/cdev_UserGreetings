@@ -14,7 +14,6 @@ namespace UserGreetings
             Console.WriteLine("Сгенерированные пользователи:");
             userDB.Display(users);
 
-
             while (true)
             {
                 Console.Write("\nВведите ID пользователя: ");
@@ -29,11 +28,6 @@ namespace UserGreetings
                 }
                 
             }
-            
-
         }
-
-
-
     }
 }

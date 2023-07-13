@@ -12,10 +12,6 @@ namespace UserGreetings
         public string Login { get; set; }
         public string Name { get; set; }
         public bool IsPremium { get; set; }
-
-
-
-
         static void ShowAds()
         {
             Console.WriteLine("Посетите наш новый сайт с бесплатными играми free.games.for.a.fool.com");
@@ -43,7 +39,5 @@ namespace UserGreetings
                 Console.WriteLine("У Вас оформлена подписка! <3");
             }
         }
-
-
     }
 }
