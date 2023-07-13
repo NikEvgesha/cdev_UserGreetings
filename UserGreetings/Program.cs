@@ -18,8 +18,15 @@ namespace UserGreetings
             while (true)
             {
                 Console.Write("\nВведите ID пользователя: ");
-                int userId = Int32.Parse(Console.ReadLine());
-                users[userId - 1].Greeting();
+                try
+                {
+                    int userId = Int32.Parse(Console.ReadLine());
+                    users[userId - 1].Greeting();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
                 
             }
             
